@@ -1,0 +1,11 @@
+How to run this checkout on Windows with XAMPP
+
+1. Install XAMPP at C:\xampp. If XAMPP is installed elsewhere, update XAMPP_DIR in run-local.bat.
+2. Double-click run-local.bat to open XAMPP Control Panel.
+3. Start MySQL in XAMPP Control Panel. Apache is not required.
+4. If the poultry database does not exist, open http://localhost/phpmyadmin, create a database named poultry, and import:
+   Poultry farm management system\Poultry farm management system\SQL File\poultry.sql
+5. Return to the launcher window and press a key. The app opens at http://127.0.0.1:8000.
+
+The launcher uses XAMPP's PHP executable to run the built-in PHP web server.
+

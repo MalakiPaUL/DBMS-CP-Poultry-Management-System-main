@@ -1,0 +1,31 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+config.local.php
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs, temporary files, and caches
+*.log
+*.tmp
+*.temp
+*.cache
+*.swp
+*.swo
+~$*
+
+# Local database exports and backups
+*.bak
+*.backup
+*.sql~
+
+# XAMPP-generated files
+xampp-control.log
+apache/logs/
+mysql/data/

@@ -72,16 +72,23 @@
 <body>
   <main>
     <h1>Poultry Farm Management System</h1>
-    <p>Use this page as the entry point to the farm management dashboard.</p>
+    <p>Run the PHP application in GitHub Codespaces or another PHP-enabled web server. Once the server is running, open the sign-in page to access the dashboard.</p>
 
-    <p><a class="button" href="Poultry%20farm%20management%20system/Poultry%20farm%20management%20system/farm/index.php">Open the dashboard</a></p>
-    <p>You will be taken to the sign-in page first. After signing in, the application opens the dashboard.</p>
+    <p><a class="button" href="Poultry%20farm%20management%20system/Poultry%20farm%20management%20system/farm/index.php">Open the sign-in page</a></p>
 
     <div class="notice">
       <strong>Important:</strong> This dashboard requires PHP and MySQL. GitHub Pages
-      cannot execute PHP; open this page through a PHP-enabled web server such as XAMPP
-      or a PHP/MySQL web host.
+      cannot execute PHP. Open this repository in GitHub Codespaces using the setup
+      described below, or use XAMPP or a PHP/MySQL web host.
     </div>
+
+    <h2>Run it in GitHub Codespaces</h2>
+    <ol>
+      <li>Push this repository, including its <code>.devcontainer</code> and <code>docker-compose.yml</code> configuration, to GitHub.</li>
+      <li>On GitHub, open the repository, select <strong>Code</strong> &gt; <strong>Codespaces</strong>, and create a Codespace.</li>
+      <li>Wait for Codespaces to build and start PHP/Apache and MariaDB. The SQL file is imported automatically on first startup.</li>
+      <li>Open the forwarded app port, then use the sign-in link above.</li>
+    </ol>
 
     <h2>Run it locally with XAMPP</h2>
     <ol>

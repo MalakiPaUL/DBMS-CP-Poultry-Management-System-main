@@ -10,6 +10,17 @@ The Poultry Farm Management System (PFMS) is a web-based application designed to
 - XAMPP, WAMP, or LAMP stack installed
 - PHPMyAdmin access
 
+#### Run in GitHub Codespaces
+
+GitHub Pages cannot execute PHP. To run this application using GitHub, use a Codespace:
+
+1. Push this repository and the Codespaces configuration to GitHub.
+2. On GitHub, open the repository, select **Code** > **Codespaces**, then create a Codespace on your branch.
+3. Codespaces builds the PHP/Apache app and MariaDB containers. The included `poultry.sql` file is imported automatically when the database is first created.
+4. Open the forwarded **Poultry Farm Management System** port when Codespaces offers it. The root page links to the sign-in page.
+
+The SQL dump includes sample data and a default `admin` / `1234` login. This is for development only; do not use these credentials for a public production deployment. The Codespaces database is development data and is not intended as persistent production storage.
+
 #### Run this checkout on Windows with XAMPP
 
 1. Ensure XAMPP is installed at `C:\xampp`. If it is installed elsewhere, update `XAMPP_DIR` at the top of `run-local.bat`.

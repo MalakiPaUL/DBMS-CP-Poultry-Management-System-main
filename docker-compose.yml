@@ -1,0 +1,36 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_USER: pfms
+      DB_PASS: pfms-dev-password
+      DB_NAME: poultry
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:10.11
+    environment:
+      MYSQL_DATABASE: poultry
+      MYSQL_USER: pfms
+      MYSQL_PASSWORD: pfms-dev-password
+      MYSQL_ROOT_PASSWORD: pfms-root-dev-password
+    volumes:
+      - poultry-db-data:/var/lib/mysql
+      - ./Poultry farm management system/Poultry farm management system/SQL File/poultry.sql:/docker-entrypoint-initdb.d/01-poultry.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  poultry-db-data:

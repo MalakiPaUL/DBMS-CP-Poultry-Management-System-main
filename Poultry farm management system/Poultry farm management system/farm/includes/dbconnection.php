@@ -1,9 +1,9 @@
 <?php 
 // DB credentials.
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','poultry');
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
+define('DB_NAME', getenv('DB_NAME') ?: 'poultry');
 // Establish database connection.
 try
 {
@@ -13,7 +13,7 @@ catch (PDOException $e)
 {
 exit("Error: " . $e->getMessage());
 }
-$con=mysqli_connect("localhost", "root", "", "poultry");
+$con=mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 if(mysqli_connect_errno()){
 echo "Connection Fail".mysqli_connect_error();
 }

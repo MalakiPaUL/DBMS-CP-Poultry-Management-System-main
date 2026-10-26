@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Open the Poultry Farm Management System dashboard.">
+  <title>Poultry Farm Management System Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, sans-serif;
+      color: #24332b;
+      background: #f3f7f3;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    main {
+      width: min(100%, 680px);
+      padding: clamp(24px, 6vw, 48px);
+      background: #fff;
+      border: 1px solid #dce7dd;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px #213a2812;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #24633c;
+      line-height: 1.2;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    .notice {
+      margin: 24px 0;
+      padding: 16px;
+      border-left: 4px solid #d59b27;
+      background: #fff8e9;
+    }
+
+    a {
+      color: #17633a;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 8px 0 16px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: #24633c;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button:hover, .button:focus {
+      background: #194a2c;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Poultry Farm Management System</h1>
+    <p>Use this page as the entry point to the farm management dashboard.</p>
+
+    <p><a class="button" href="Poultry%20farm%20management%20system/Poultry%20farm%20management%20system/farm/index.php">Open the dashboard</a></p>
+    <p>You will be taken to the sign-in page first. After signing in, the application opens the dashboard.</p>
+
+    <div class="notice">
+      <strong>Important:</strong> This dashboard requires PHP and MySQL. GitHub Pages
+      cannot execute PHP; open this page through a PHP-enabled web server such as XAMPP
+      or a PHP/MySQL web host.
+    </div>
+
+    <h2>Run it locally with XAMPP</h2>
+    <ol>
+      <li>Install and open XAMPP, then start MySQL.</li>
+      <li>Create a database named <code>poultry</code> and import the project's <code>poultry.sql</code> file.</li>
+      <li>From the project folder on Windows, run <code>run-local.bat</code>.</li>
+      <li>Open <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>.</li>
+    </ol>
+
+    <p><a href="README.md">Read the project setup guide</a></p>
+  </main>
+</body>
+</html>

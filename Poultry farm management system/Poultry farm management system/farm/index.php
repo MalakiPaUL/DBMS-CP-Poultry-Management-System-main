@@ -56,6 +56,14 @@ if(isset($_POST['login']))
 <?php @include("includes/head.php");?>
 <body class="login-body">
   <div class="poultry-login-wrap">
+    <!-- Decorative background chickens -->
+    <div class="chicken-bg">
+      <svg class="chicken c1" viewBox="0 0 64 64"><path d="M32 4c-5 0-9 3-10 7a1 1 0 0 0 0 1c2 4 6 4 10 4s8 0 10-4a1 1 0 0 0 0-1c-1-4-5-7-10-7z"/><path d="M22 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M42 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M30 24a8 8 0 0 1 8-8c4 0 7 2 8 6a1 1 0 0 0 0 2c-1 4-4 6-8 6s-7-2-8-6a1 1 0 0 0 0-2c-1-4 2-6 8-2z"/></svg>
+      <svg class="chicken c2" viewBox="0 0 64 64"><path d="M32 4c-5 0-9 3-10 7a1 1 0 0 0 0 1c2 4 6 4 10 4s8 0 10-4a1 1 0 0 0 0-1c-1-4-5-7-10-7z"/><path d="M22 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M42 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M30 24a8 8 0 0 1 8-8c4 0 7 2 8 6a1 1 0 0 0 0 2c-1 4-4 6-8 6s-7-2-8-6a1 1 0 0 0 0-2c-1-4 2-6 8-2z"/></svg>
+      <svg class="chicken c3" viewBox="0 0 64 64"><path d="M32 4c-5 0-9 3-10 7a1 1 0 0 0 0 1c2 4 6 4 10 4s8 0 10-4a1 1 0 0 0 0-1c-1-4-5-7-10-7z"/><path d="M22 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M42 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M30 24a8 8 0 0 1 8-8c4 0 7 2 8 6a1 1 0 0 0 0 2c-1 4-4 6-8 6s-7-2-8-6a1 1 0 0 0 0-2c-1-4 2-6 8-2z"/></svg>
+      <svg class="chicken c4" viewBox="0 0 64 64"><path d="M32 4c-5 0-9 3-10 7a1 1 0 0 0 0 1c2 4 6 4 10 4s8 0 10-4a1 1 0 0 0 0-1c-1-4-5-7-10-7z"/><path d="M22 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M42 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M30 24a8 8 0 0 1 8-8c4 0 7 2 8 6a1 1 0 0 0 0 2c-1 4-4 6-8 6s-7-2-8-6a1 1 0 0 0 0-2c-1-4 2-6 8-2z"/></svg>
+      <svg class="chicken c5" viewBox="0 0 64 64"><path d="M32 4c-5 0-9 3-10 7a1 1 0 0 0 0 1c2 4 6 4 10 4s8 0 10-4a1 1 0 0 0 0-1c-1-4-5-7-10-7z"/><path d="M22 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M42 14c-2 0-3 1-3 3v2c0 1 1 2 2 2h2c1 0 2-1 2-2v-2c0-2-1-3-3-3z"/><path d="M30 24a8 8 0 0 1 8-8c4 0 7 2 8 6a1 1 0 0 0 0 2c-1 4-4 6-8 6s-7-2-8-6a1 1 0 0 0 0-2c-1-4 2-6 8-2z"/></svg>
+    </div>
     <!-- Left: Farm branding panel -->
     <div class="poultry-panel">
       <div class="deck">
@@ -145,6 +153,34 @@ if(isset($_POST['login']))
       overflow: hidden;
       box-shadow: var(--pf-shadow);
       border: 1px solid rgba(45, 90, 39, 0.08);
+      position: relative;
+    }
+
+    /* Background chickens */
+    .chicken-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .chicken {
+      position: absolute;
+      opacity: 0.08;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+      mix-blend-mode: multiply;
+    }
+
+    .c1 { top: 10%; left: 5%; width: 44px; height: 44px; animation: float 6s ease-in-out infinite; }
+    .c2 { top: 5%; right: 12%; width: 38px; height: 38px; animation: float 8s ease-in-out infinite reverse; }
+    .c3 { bottom: 15%; left: 8%; width: 50px; height: 50px; animation: float 7s ease-in-out infinite; }
+    .c4 { bottom: 8%; right: 10%; width: 42px; height: 42px; animation: float 9s ease-in-out infinite reverse; }
+    .c5 { top: 35%; left: 50%; width: 34px; height: 34px; transform: translateX(-50%); animation: float 5.5s ease-in-out infinite; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
     }
 
     /* Left farm panel */

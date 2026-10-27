@@ -172,7 +172,7 @@ CREATE TABLE `tblcompany` (
 --
 
 INSERT INTO `tblcompany` (`id`, `regno`, `companyname`, `companyemail`, `country`, `companyphone`, `companyaddress`, `companylogo`, `status`, `developer`, `creationdate`) VALUES
-(4, '1002', 'Poultry farm', 'poultryfarm@gmail.com', 'Uganda', 770546590, 'California', 'poultrylogo.png', '1', 'gerald', '2021-02-02 12:17:15');
+(4, '1002', 'Paul Malaki\'s Poultry Farm', 'poultryfarm@gmail.com', 'Philippines', '63+9236100897', 'Davao City', 'poultrylogo.png', '1', 'gerald', '2021-02-02 12:17:15');
 
 -- --------------------------------------------------------
 

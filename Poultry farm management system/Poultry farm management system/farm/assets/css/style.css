@@ -13682,4 +13682,138 @@ dl {
   background-color:#D81B60;
 }
 
+/* ===== Poultry Sign Up Theme ===== */
+:root{
+  --poultry-green:#1B5E20;
+  --poultry-green-dark:#0E3B10;
+  --poultry-green-light:#2E7D32;
+  --poultry-gold:#F9A825;
+  --poultry-gold-dark:#F57C00;
+  --poultry-cream:#FFFDF6;
+  --poultry-brown:#4E342E;
+  --poultry-text:#263238;
+  --poultry-border:#d7e3d7;
+}
+.poultry-signup-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100%;
+  background:linear-gradient(135deg,#e8f5e9 0%,#c8e6c9 60%,#a5d6a7 100%);
+  padding:1.5rem;
+}
+.poultry-card{
+  width:100%;
+  max-width:520px;
+  background:#ffffff;
+  border-radius:12px;
+  box-shadow:0 12px 34px rgba(27,94,32,0.14);
+  overflow:hidden;
+  border:1px solid rgba(27,94,32,0.08);
+}
+.poultry-header{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:1.35rem 1.5rem;
+  background:linear-gradient(90deg,var(--poultry-green) 0%,var(--poultry-green-light) 100%);
+  color:#fff;
+}
+.poultry-logo{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+.poultry-brand h2{
+  margin:0;
+  font-size:1.25rem;
+  font-weight:800;
+  letter-spacing:0.3px;
+  line-height:1.25;
+}
+.poultry-brand p{
+  margin:0;
+  font-size:0.82rem;
+  opacity:0.92;
+  font-weight:600;
+  letter-spacing:0.2px;
+}
+.poultry-form{
+  padding:1.75rem 1.5rem 1.5rem;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+  align-items:end;
+}
+.poultry-field label{
+  display:block;
+  font-size:0.78rem;
+  font-weight:800;
+  color:var(--poultry-brown);
+  text-transform:uppercase;
+  letter-spacing:0.7px;
+  margin-bottom:0.45rem;
+}
+.poultry-input,.poultry-select{
+  width:100%;
+  height:3rem;
+  padding:0 1rem;
+  font-size:0.92rem;
+  color:var(--poultry-text);
+  background:#fff;
+  border:1px solid var(--poultry-border);
+  border-radius:7px;
+  transition:border-color .18s,box-shadow .18s;
+  font-family:inherit;
+}
+.poultry-input:focus,.poultry-select:focus{
+  outline:none;
+  border-color:var(--poultry-gold);
+  box-shadow:0 0 0 3px rgba(249,168,37,0.14);
+}
+.poultry-select{
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231B5E20' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat:no-repeat;
+  background-position:right 1rem center;
+  background-size:1.05rem;
+  padding-right:2.4rem;
+}
+.poultry-btn{
+  grid-column:1/-1;
+  width:100%;
+  max-width:260px;
+  margin:0.35rem auto 0;
+  padding:0.95rem 1.5rem;
+  background:linear-gradient(90deg,var(--poultry-gold) 0%,var(--poultry-gold-dark) 100%);
+  color:#fff;
+  border:none;
+  border-radius:7px;
+  font-size:0.95rem;
+  font-weight:800;
+  letter-spacing:0.6px;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 4px 14px rgba(249,168,37,0.4);
+  transition:transform .15s,box-shadow .15s,opacity .15s;
+}
+.poultry-btn:hover{
+  opacity:0.96;
+  box-shadow:0 6px 18px rgba(249,168,37,0.5);
+}
+.poultry-btn:active{
+  transform:translateY(1px);
+}
+#user-availability-status,#user-availability-status2{
+  display:block;
+  font-size:0.72rem;
+  margin-top:0.35rem;
+  min-height:1.1rem;
+}
+@media (max-width:576px){
+  .poultry-card{border-radius:0;}
+  .poultry-btn{max-width:100%;}
+}
+
 /*# sourceMappingURL=style.css.map */

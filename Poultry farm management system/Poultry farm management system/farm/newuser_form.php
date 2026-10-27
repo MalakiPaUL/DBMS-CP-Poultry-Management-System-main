@@ -101,52 +101,60 @@ if(!empty($_POST["fullname"])) {
     }
 </script>
 <div class="card-body">
-    <form  method="post" name="signup" onSubmit="return valid();">
-        <div class="row ">
-            <div class="form-group col-md-6">
-                <select class="form-control"   name="dignity"  id="dignity"  required>
-                    <option value="">Select permisions</option>
-                    <option value="Admin">Admin</option>
-                    <option value="User">User</option>
-                </select>
+    <div class="poultry-signup-wrap">
+        <div class="poultry-card">
+            <div class="poultry-header">
+                <img src="companyimages/poultrylogo.png" alt="Poultry Farm Logo" class="poultry-logo">
+                <div class="poultry-brand">
+                    <h2 class="poultry-title">Create Staff Account</h2>
+                    <p class="poultry-sub">Poultry Farm Management System &bull; Staff Registration</p>
+                </div>
             </div>
-            <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="staffid" placeholder="Staff ID" required="required">
-            </div>
+            <form method="post" name="signup" onSubmit="return valid();" class="poultry-form">
+                <div class="poultry-field">
+                    <label for="dignity">Role / Permission</label>
+                    <select class="poultry-select" name="dignity" id="dignity" required>
+                        <option value="">Select permission</option>
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                    </select>
+                </div>
+                <div class="poultry-field">
+                    <label for="staffid">Staff ID</label>
+                    <input type="text" class="poultry-input" name="staffid" id="staffid" placeholder="e.g. STF-001" required="required">
+                </div>
+                <div class="poultry-field">
+                    <label for="fullname">User Name</label>
+                    <input type="text" class="poultry-input" name="fullname" id="fullname" placeholder="Enter user name" onBlur="checkAvailability2()" required="required">
+                    <span id="user-availability-status2" style="font-size:12px;"></span>
+                </div>
+                <div class="poultry-field">
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="poultry-input" name="firstname" id="firstname" placeholder="First name" required="required">
+                </div>
+                <div class="poultry-field">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="poultry-input" name="lastname" id="lastname" placeholder="Last name" required="required">
+                </div>
+                <div class="poultry-field">
+                    <label for="mobileno">Mobile Number</label>
+                    <input type="text" class="poultry-input" name="mobileno" id="mobileno" placeholder="Mobile number" required="required">
+                </div>
+                <div class="poultry-field">
+                    <label for="emailid">Email Address</label>
+                    <input type="email" class="poultry-input" name="emailid" id="emailid" placeholder="you@farm.com" onBlur="checkAvailability()" required="required">
+                    <span id="user-availability-status" style="font-size:12px;"></span>
+                </div>
+                <div class="poultry-field">
+                    <label for="password">Password</label>
+                    <input type="password" class="poultry-input" name="password" id="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required="required">
+                </div>
+                <div class="poultry-field">
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input type="password" class="poultry-input" name="confirmpassword" id="confirmpassword" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required="required">
+                </div>
+                <button type="submit" name="signup" id="submit" class="poultry-btn">Register Account</button>
+            </form>
         </div>
-        <div class="row">
-            <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="fullname" id="fullname" placeholder="User Name" onBlur="checkAvailability2()" required="required">
-                <span id="user-availability-status2" style="font-size:12px;"></span>
-            </div>
-            <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="firstname" placeholder="First Name" required="required">
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="lastname" placeholder="Last Name" required="required">
-            </div>
-            <div class="form-group col-md-6">
-                <input type="text" class="form-control" name="mobileno" placeholder="Mobile Number" required="required">
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="emailid" id="emailid" onBlur="checkAvailability()" placeholder="Email Address" required="required">
-                <span id="user-availability-status" style="font-size:12px;"></span> 
-            </div>
-            <div class="form-group col-md-6">
-                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-6">
-                <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required="required">
-            </div>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Register" name="signup" id="submit" class="btn btn-info">
-        </div>
-    </form>
+    </div>
 </div>

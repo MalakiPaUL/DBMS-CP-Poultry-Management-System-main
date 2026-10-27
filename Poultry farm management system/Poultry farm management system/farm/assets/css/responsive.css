@@ -1,0 +1,175 @@
+/* =========================================================
+   Poultry Farm Management System - Responsive Overrides
+   ========================================================= */
+
+/* Base: make all media scale down */
+img, video, embed, object, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables scroll horizontally on small screens */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+}
+
+/* Ensure standard tables behave on small screens */
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+/* ---------- Mobile (< 992px): sidebar off-canvas ---------- */
+@media (max-width: 991.98px) {
+  .container-scroller,
+  .page-body-wrapper,
+  .main-panel,
+  .content-wrapper {
+    overflow-x: hidden;
+  }
+
+  .sidebar-offcanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    z-index: 1050;
+    transform: translatex(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar-offcanvas.active {
+    transform: translatex(0);
+  }
+
+  /* Backdrop overlay when sidebar open */
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .sidebar-backdrop.active {
+    display: block;
+    opacity: 1;
+  }
+
+  /* Remove desktop sidebar gap on main panel */
+  .page-body-wrapper {
+    padding-left: 0 !important;
+  }
+  .main-panel {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Navbar: compact brand on mobile */
+  .navbar.default-layout-navbar {
+    flex-wrap: wrap;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .navbar-brand-wrapper {
+    width: auto;
+    flex: 0 0 auto;
+  }
+  .navbar-brand-wrapper .brand-logo img {
+    height: 45px !important;
+    width: auto !important;
+  }
+  .navbar-brand-wrapper .brand-logo-mini {
+    display: none !important;
+  }
+
+  /* Search already hidden on mobile via d-none d-md-block; keep it hidden */
+  .search-field {
+    display: none !important;
+  }
+
+  /* Stack grid columns full width */
+  .col-md-4.stretch-card,
+  .col-lg-4,
+  .col-lg-12,
+  .col-md-6 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .grid-margin {
+    margin-bottom: 1rem;
+  }
+
+  /* Auth / login page: full width form */
+  .auth-form-light {
+    padding: 2rem 1rem !important;
+  }
+  .col-lg-4.mx-auto {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Full-width inputs and buttons */
+  .form-control {
+    width: 100%;
+  }
+  .btn-block,
+  .auth-form-btn {
+    width: 100%;
+  }
+
+  /* Allow table cells to wrap text */
+  th,
+  td {
+    white-space: normal !important;
+    word-wrap: break-word;
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
+  }
+}
+
+/* ---------- Tablet (992px - 1199px): narrower sidebar ---------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .sidebar-offcanvas {
+    width: 230px;
+    position: relative !important;
+    transform: none !important;
+  }
+  .main-panel {
+    margin-left: 230px !important;
+  }
+}
+
+/* ---------- Large desktop (>= 1200px): default ---------- */
+@media (min-width: 1200px) {
+  .sidebar-offcanvas {
+    position: relative !important;
+    transform: none !important;
+    width: 260px;
+  }
+  .sidebar-backdrop {
+    display: none !important;
+  }
+}
+
+/* Body top padding so fixed navbar doesn't cover content */
+body {
+  padding-top: 60px;
+}

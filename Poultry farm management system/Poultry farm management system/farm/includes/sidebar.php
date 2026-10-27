@@ -153,4 +153,5 @@
             }
         } ?>
     </ul>
-</nav>
+  </nav>
+  <div class="sidebar-backdrop"></div>

@@ -14,6 +14,7 @@
   <!-- Layout styles -->
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- End layout styles -->
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="shortcut icon" href="companyimages/head.png" />
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">

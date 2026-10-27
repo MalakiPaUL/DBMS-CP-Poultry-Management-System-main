@@ -1,0 +1,19 @@
+# Poultry Farm Management System - Live Server Configuration
+
+# Directory index
+DirectoryIndex index.php index.html
+
+# PHP error display (for debugging; set to Off in production)
+php_flag display_errors on
+php_value error_reporting E_ALL
+
+# Max file upload size (for product images)
+php_value upload_max_filesize 16M
+php_value post_max_size 16M
+php_value max_execution_time 60
+
+# Disable MIME type sniffing
+Header always set X-Content-Type-Options nosniff
+
+# Default charset
+AddDefaultCharset utf-8
